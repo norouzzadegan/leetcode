@@ -12,3 +12,18 @@ class Solution:
 class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
         return max([sum(i) for i in accounts])
+
+# https://leetcode.com/problems/fizz-buzz/
+class Solution:
+    def fizzBuzz(self, n: int) -> List[str]:
+        target = []
+        for i in range(1, n+1):
+            if (i % 5 == 0) and (i % 3 == 0):
+                target.append('FizzBuzz')
+            elif (i % 3 == 0):
+                target.append('Fizz')
+            elif (i % 5 == 0):
+                target.append('Buzz')
+            else:
+                target.append(str(i))
+        return target
